@@ -5,6 +5,9 @@ jdk:
 before_install:
   - chmod +x gradlew
 
+script:
+  - ./gradlew assemble
+
 deploy:
   provider: heroku
   api_key:
