@@ -1,13 +1,13 @@
 spring:
   datasource:
-    url: jdbc:h2:mem:testdb
-    username: sa
-    password:
+    url: ${databaseUrl}
+    username: ${usernameDB}
+    password: ${passwordDB}
     hikari:
       connection-test-query: SELECT 1
 
   jpa:
-    database: H2
+    database: POSTGRESQL
     show-sql: true
     generate-ddl: true
     hibernate:
